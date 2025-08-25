@@ -31,6 +31,27 @@ function setInnerText(value)
     element.innerText = value;
 }
 
+// function to toggle
+function handleToggle(formId)
+{
+       const forms = document.getElementsByClassName('form');
+for(const form of forms){
+    form.style.display = 'none';
+}
+document.getElementById(formId).style.display = 'block';
+}
+
+
+
+
+
+
+
+
+
+
+
+
 document.getElementById('add-money-btn').addEventListener('click', function(e){
 e.preventDefault();
 const bankSelect = document.getElementById('bank-select').value;
@@ -76,17 +97,63 @@ setInnerText(totalNewAvailableBalance)
 
 
 
-
-
 // toggling feature 
 document.getElementById('add-button').addEventListener('click', function(){
-    document.getElementById('cash-out-parent').style.display = 'none';
-    document.getElementById('add-money-parent').style.display = 'block';
+handleToggle('add-money-parent');
+
 })
 
 document.getElementById('cashout-button').addEventListener('click', function(){
-    document.getElementById('add-money-parent').style.display = 'none';
-    document.getElementById('cash-out-parent').style.display = 'block';
+// //     document.getElementById('add-money-parent').style.display = 'none';
+// //  document.getElementById('transfer-money-parent').style.display = 'none';
+// //     document.getElementById('cash-out-parent').style.display = 'block';
+// const forms = document.getElementsByClassName('form');
+// // console.log(forms);
+// for(const form of forms){
+//     // console.log(form);
+//     form.style.display = 'none';
+// }
+// document.getElementById('cash-out-parent').style.display = 'block';
+handleToggle('cash-out-parent');
+
 })
 
 
+
+  document.getElementById('transfer-button').addEventListener('click', function(){
+//     const forms = document.getElementsByClassName('form');
+// for(const form of forms){
+//     form.style.display = 'none';
+// }
+// document.getElementById('transfer-money-parent').style.display = 'block';
+handleToggle('transfer-money-parent');
+})
+
+  document.getElementById('get-bonus-button').addEventListener('click', function(){
+//     const forms = document.getElementsByClassName('form');
+// for(const form of forms){
+//     form.style.display = 'none';
+// }
+// document.getElementById('get-bonus-parent').style.display = 'block';
+handleToggle('get-bonus-parent');
+})
+
+// pay bill
+  document.getElementById('pay-bill-button').addEventListener('click', function(){
+//     const forms = document.getElementsByClassName('form');
+// for(const form of forms){
+//     form.style.display = 'none';
+// }
+// document.getElementById('pay-bill-parent').style.display = 'block';
+handleToggle('pay-bill-parent');
+})
+
+// transaction 
+  document.getElementById('transactions-button').addEventListener('click', function(){
+//     const forms = document.getElementsByClassName('form');
+// for(const form of forms){
+//     form.style.display = 'none';
+// }
+// document.getElementById('transactions-parent').style.display = 'block';
+handleToggle('transactions-parent');
+})
