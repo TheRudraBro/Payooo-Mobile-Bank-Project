@@ -291,3 +291,12 @@ handleButtonToggle('transactions-button');
 //ok
 
 })
+
+
+
+// Log out
+document.getElementById('logout-button').addEventListener('click', function() {
+    // Perform logout actions
+    alert('Logged out successfully');
+    window.location.href = './index.html';
+});
