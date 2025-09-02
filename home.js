@@ -44,6 +44,17 @@ document.getElementById(formId).style.display = 'block';
 
 
 
+// function to toggle button
+function handleButtonToggle(buttonId)
+{
+    const buttons = document.getElementsByClassName('form-btn');
+    for(const btn of buttons){
+        btn.classList.remove('border-[#0874f2]', 'bg-[#0874f20d]');
+        btn.classList.add('border-gray-300');
+    }
+    document.getElementById(buttonId).classList.remove('border-gray-300');
+    document.getElementById(buttonId).classList.add('border-[#0874f2]', 'bg-[#0874f20d]');
+}
 
 
 
@@ -100,8 +111,18 @@ setInnerText(totalNewAvailableBalance)
 // toggling feature 
 document.getElementById('add-button').addEventListener('click', function(){
 handleToggle('add-money-parent');
+handleButtonToggle('add-button');
 
-})
+// const formsBtns = document.getElementsByClassName('form-btn');
+// // console.log(formsBtns);
+
+// for (const btn of formsBtns) {
+//     btn.classList.remove('border-[#0874f2]', 'bg-[#0874f20d]');
+//     btn.classList.add('border-gray-300');
+// }
+// document.getElementById('add-button').classList.remove('border-gray-300');
+// document.getElementById('add-button').classList.add('border-[#0874f2]', 'bg-[#0874f20d]');
+ })
 
 document.getElementById('cashout-button').addEventListener('click', function(){
 // //     document.getElementById('add-money-parent').style.display = 'none';
@@ -115,6 +136,18 @@ document.getElementById('cashout-button').addEventListener('click', function(){
 // }
 // document.getElementById('cash-out-parent').style.display = 'block';
 handleToggle('cash-out-parent');
+handleButtonToggle('cashout-button');
+
+// const formsBtns = document.getElementsByClassName('form-btn');
+// // console.log(formsBtns);
+
+// for (const btn of formsBtns) {
+//     btn.classList.remove('border-[#0874f2]', 'bg-[#0874f20d]');
+//     btn.classList.add('border-gray-300');
+// }
+// document.getElementById('cashout-button').classList.remove('border-gray-300');
+// document.getElementById('cashout-button').classList.add('border-[#0874f2]', 'bg-[#0874f20d]');
+
 
 })
 
@@ -127,6 +160,17 @@ handleToggle('cash-out-parent');
 // }
 // document.getElementById('transfer-money-parent').style.display = 'block';
 handleToggle('transfer-money-parent');
+handleButtonToggle('transfer-button');
+// const formsBtns = document.getElementsByClassName('form-btn');
+// // console.log(formsBtns);
+
+// for (const btn of formsBtns) {
+//     btn.classList.remove('border-[#0874f2]', 'bg-[#0874f20d]');
+//     btn.classList.add('border-gray-300');
+// }
+// document.getElementById('transfer-button').classList.remove('border-gray-300');
+// document.getElementById('transfer-button').classList.add('border-[#0874f2]', 'bg-[#0874f20d]');
+
 })
 
   document.getElementById('get-bonus-button').addEventListener('click', function(){
@@ -136,6 +180,17 @@ handleToggle('transfer-money-parent');
 // }
 // document.getElementById('get-bonus-parent').style.display = 'block';
 handleToggle('get-bonus-parent');
+handleButtonToggle('get-bonus-button');
+// const formsBtns = document.getElementsByClassName('form-btn');
+// // console.log(formsBtns);
+
+// for (const btn of formsBtns) {
+//     btn.classList.remove('border-[#0874f2]', 'bg-[#0874f20d]');
+//     btn.classList.add('border-gray-300');
+// }
+// document.getElementById('get-bonus-button').classList.remove('border-gray-300');
+// document.getElementById('get-bonus-button').classList.add('border-[#0874f2]', 'bg-[#0874f20d]');
+
 })
 
 // pay bill
@@ -146,6 +201,17 @@ handleToggle('get-bonus-parent');
 // }
 // document.getElementById('pay-bill-parent').style.display = 'block';
 handleToggle('pay-bill-parent');
+handleButtonToggle('pay-bill-button');
+// const formsBtns = document.getElementsByClassName('form-btn');
+// // console.log(formsBtns);
+
+// for (const btn of formsBtns) {
+//     btn.classList.remove('border-[#0874f2]', 'bg-[#0874f20d]');
+//     btn.classList.add('border-gray-300');
+// }
+// document.getElementById('pay-bill-button').classList.remove('border-gray-300');
+// document.getElementById('pay-bill-button').classList.add('border-[#0874f2]', 'bg-[#0874f20d]');
+
 })
 
 // transaction 
@@ -156,4 +222,16 @@ handleToggle('pay-bill-parent');
 // }
 // document.getElementById('transactions-parent').style.display = 'block';
 handleToggle('transactions-parent');
+handleButtonToggle('transactions-button');
+
+// const formsBtns = document.getElementsByClassName('form-btn');
+// // console.log(formsBtns);
+
+// for (const btn of formsBtns) {
+//     btn.classList.remove('border-[#0874f2]', 'bg-[#0874f20d]');
+//     btn.classList.add('border-gray-300');
+// }
+// document.getElementById('transactions-button').classList.remove('border-gray-300');
+// document.getElementById('transactions-button').classList.add('border-[#0874f2]', 'bg-[#0874f20d]');
+
 })
