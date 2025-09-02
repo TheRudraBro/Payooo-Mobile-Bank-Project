@@ -144,16 +144,32 @@
             <input type="text" placeholder="Enter 4 digit pin number" class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" id="" />
             </div>
 <button class="btn bg-[#0874F2] mt-5 w-full rounded-3xl font-semibold text-white" id="withdraw-btn">Cash-Out</button>
-      
-      
-      
-
         </form>
-  
      </div>
  <!-- Transfer Money -->
     <div class="form" id="transfer-money-parent" style="display: none;">
        <h1 class="my-5 font-bold">Transfer Money</h1>
+        <form action="" class="bg-white rounded-lg p-8">
+            
+            <div class="mb-4">
+                <label class="font-semibold" for="">User Account Number</label>
+            <br>
+            <input type="text" placeholder="Enter 11 digit number" class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" id="" />
+            </div>
+            <div>
+                  <label id="withdraw-amount" class="font-semibold" for="">Amount</label>
+            <br>
+            <input type="text" placeholder="Enter Amount to Cash-out" class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" id="" />
+            </div>
+            <br>
+            <div class="">
+                  <label class="font-semibold" for="">Pin Number</label>
+            <br>
+            <input type="text" placeholder="Enter 4 digit pin number" class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" id="" />
+            </div>
+<button class="btn bg-[#0874F2] mt-5 w-full rounded-3xl font-semibold text-white" id="withdraw-btn">Send Now</button>
+        </form>
+       
     </div> 
 
 
@@ -161,31 +177,86 @@
     <!-- Get Bonus -->
        <div  class="form" id="get-bonus-parent" style="display: none;">
        <h1 class="my-5 font-bold">Get Bonus</h1>
+        <form action="" class="bg-white rounded-lg p-8">
+            
+            <div class="mb-4">
+                <label class="font-semibold" for="">Enter Bonus Coupon</label>
+            <br>
+            <input type="text" placeholder="Enter 11 digit number" class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" id="" />
+            </div>
+
+<button class="btn bg-[#0874F2] mt-5 w-full rounded-3xl font-semibold text-white" id="withdraw-btn">Get Bonus</button>
+        </form>
     </div> 
 
     <!-- pay bill 
       -->
       <div class="form" id="pay-bill-parent" style="display: none;">
        <h1 class="my-5 font-bold">Pay Bill</h1>
+        <form action="" class="bg-white rounded-lg p-8">
+            <div class="mb-4">
+                <h1 class="font-semibold">Select A Bank</h1>
+                <select class="select bg-[#f4f5f7] mt-3 rounded-3xl w-full" id="bank-select">
+  <option disabled selected>Select To Pay</option>
+  <option>Sonali Bank</option>
+  <option>Rupali Bank</option>
+  <option>Dutch Bangla</option>
+  <option>Asia Bank</option>
+  <option>AB Bank</option>
+  <option>Dhaka Bank</option>
+</select>
+            </div>
+            <div class="mb-4">
+                <label class="font-semibold" for="">Biller Account Number</label>
+            <br>
+            <input type="text" placeholder="Enter Bank Account Number" class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" id="account-number" />
+            </div>
+            <div>
+                  <label class="font-semibold" for="">Amount to Pay</label>
+            <br>
+            <input type="text" placeholder="Enter Amount to Pay" class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" id="add-amount" />
+            </div>
+            <br>
+            <div class="">
+                  <label class="font-semibold" for="">Pin Number</label>
+            <br>
+            <input type="text" placeholder="Enter 4 digit pin number" class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" id="pin-number" />
+            </div>
+<button class="btn bg-[#0874F2] mt-5 w-full rounded-3xl font-semibold text-white" id="add-money-btn">Pay Now</button>
+      
+      
+      
+
+        </form>
     </div> 
 
 
     <!-- Transactions  -->
        <div class="form" id="transactions-parent" style="display: none;">
-       <h1 class="my-5 font-bold">Transactions</h1>
+     <div class="flex justify-between items-center">
+          <h1 class="my-5 font-bold">Transactions</h1>
+          <p class="text-[#08080880]">View All</p>
+     </div>
+
+<div id="transaction-container">
+
+<!-- <div class="bg-white rounded-xl p-3 flex justify-between items-center mb-3">
+    <div class="flex items-center">
+        <div class=" p-3 rounded-full bg-[#f4f5f7]">
+            <img src="Images/wallet1.png" class="mx-auto" alt="">
+        </div>
+        <div class="ml-3">
+            <h1>Electricity Bill</h1>
+            <p class="text-[#08080880]">Today 01:44 AM</p>
+        </div>
+    </div>
+    <i class="fa-solid fa-ellipsis-vertical"></i>
+</div> -->
     </div> 
-
-
-
   </div>
+</div>
 
   
-
-
-
-
-
-
 
 
 <script src="home.js"></script>

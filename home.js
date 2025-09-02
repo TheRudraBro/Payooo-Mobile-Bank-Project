@@ -1,5 +1,7 @@
 // Add money feature
 const validPin = 1234;
+//transaction
+const transactions = [];
 
 // function to get input value 
 function getInputValueNumber(id)
@@ -68,6 +70,12 @@ e.preventDefault();
 const bankSelect = document.getElementById('bank-select').value;
 const accountNumber = document.getElementById('account-number').value;
 const amount = parseInt(document.getElementById('add-amount').value);
+
+if(amount<=0){
+  alert('Invalid amount');
+  return;
+}
+
 const pinNumber = parseInt(document.getElementById('pin-number').value);
 const availableBalance = getInnerText('available-balance');
 if(accountNumber.length < 11){
@@ -81,6 +89,13 @@ if(pinNumber !== validPin){
 const totalBalance = availableBalance + amount;
 
 document.getElementById('available-balance').innerText = totalBalance;
+const data = {
+  name: 'Add Money',
+  date: new Date().toLocaleTimeString()
+}
+transactions.push(data);
+
+// console.log(transactions)
 
 })
 
@@ -91,20 +106,60 @@ e.preventDefault();
 
 const amount = parseInt(document.getElementById('withdraw-amount').value) ;
 
+
+
 const availableBalance = getInnerText('available-balance');
 const totalNewAvailableBalance = availableBalance - amount;
 // console.log(totalNewAvailableBalance);
 
 document.getElementById('available-balance').innerText = totalNewAvailableBalance;
-setInnerText(totalNewAvailableBalance)
+setInnerText(totalNewAvailableBalance);
+
+
+if(amount<=0 || amount > availableBalance){
+  alert('Invalid amount');
+  return;
+}
+
+
+const data = {
+  name: 'Cash-Out',
+  date: new Date().toLocaleTimeString()
+}
+transactions.push(data);
+
+console.log(transactions);
 });
 
 
+// transaction history
+document.getElementById('transactions-button').addEventListener('click', function(){
+  // console.log(' transaction btn click')
+  // console.log(transactions);
+    const transactionContainer = document.getElementById('transaction-container');
+    transactionContainer.innerText = '';
+ 
+    for(const data of transactions){
+        const div = document.createElement('div');
+        div.innerHTML = `
+        
+<div class="bg-white rounded-xl p-3 flex justify-between items-center mb-3">
+    <div class="flex items-center">
+        <div class=" p-3 rounded-full bg-[#f4f5f7]">
+            <img src="Images/wallet1.png" class="mx-auto" alt="">
+        </div>
+        <div class="ml-3">
+            <h1>${data.name}</h1>
+            <p>${data.date}</p>
+        </div>
+    </div>
+    <i class="fa-solid fa-ellipsis-vertical"></i>
+</div>
 
-
-
-
-
+        `
+        transactionContainer.appendChild(div);
+    }
+});
 
 
 
