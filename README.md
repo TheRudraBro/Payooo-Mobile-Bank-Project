@@ -1,1 +1,1 @@
-Live Link : https://therudrabro.github.io/Payooo-Mobile-Bank-Project/
+Explore Web : https://payooo-mobile-bank-project.netlify.app/
